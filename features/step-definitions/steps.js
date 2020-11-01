@@ -17,6 +17,7 @@ When(/^I login with (\w+) and (.+)$/, (username, password) => {
 
 Then(/^I should see a flash message saying (.*)$/, (message) => {
     expect(SecurePage.flashAlert).toBeExisting();
+    // nothing
     expect(SecurePage.flashAlert).toHaveTextContaining(message);
 });
 
